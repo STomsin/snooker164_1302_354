@@ -1,12 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField]
     private GameObject adjustPanel;
+
+    [SerializeField]
+    private Slider volumeSlider;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        volumeSlider.value = AudioManager.instance.LoadCurrentMasterVol();
+
         AudioManager.instance.PlayBGM(0);
     }
 
