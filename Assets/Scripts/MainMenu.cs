@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
     }
     public void StartNewGame()
     {
-        SceneManager.LoadScene("Scene01");
+        SceneManager.LoadScene("Loading");
     }
     public void ExitGame()
     {
