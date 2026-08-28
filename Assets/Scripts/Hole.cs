@@ -21,6 +21,7 @@ public class Hole : MonoBehaviour
 
             GameManager.instance.ShowNotiText(b.Point);
             Destroy(b.gameObject);
+            AudioManager.instance.PlaySFX(0);
         }
     }
 }
