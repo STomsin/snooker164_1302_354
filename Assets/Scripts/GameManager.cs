@@ -77,6 +77,8 @@ public class GameManager : MonoBehaviour
         {
             StopBall();
         }
+        if (Keyboard.current.leftShiftKey.isPressed & Keyboard.current.sKey.wasPressedThisFrame)
+            SaveGame();
 
     }
 
@@ -134,5 +136,34 @@ public class GameManager : MonoBehaviour
     public void ShowString()
     {
         notiText.text = "You lose";
+    }
+
+    public void SaveGame()
+    {
+        StopBall();
+
+        if (cubeBall != null)
+        {
+            PlayerPrefs.SetFloat("cueBallPosX", cubeBall.transform.position.x);
+            PlayerPrefs.SetFloat("cueBallPosY", cubeBall.transform.position.x);
+            PlayerPrefs.SetFloat("cueBallPosZ", cubeBall.transform.position.x);
+        }
+    }
+
+    public void LoadGame()
+    {
+        StopBall();
+
+        if (cubeBall != null)
+        {
+            float x = PlayerPrefs.GetFloat("cueBallPosX");
+            float y = PlayerPrefs.GetFloat("cueBallPosY");
+            float z = PlayerPrefs.GetFloat("cueBallPosZ");
+
+            cubeBall.transform.position = new Vector3(x, y, z);
+            
+            Debug.Log("Loaded");
+
+        }
     }
 }
