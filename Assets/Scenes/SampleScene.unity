@@ -2235,8 +2235,8 @@ MonoBehaviour:
   ballPrefab: {fileID: 4088968666176395267, guid: d3e8ef1e8b726fb4f8f6efa75f5a5f73, type: 3}
   cubeBall: {fileID: 806447237}
   xInput: 0
-  ballline: {fileID: 0}
-  cam: {fileID: 0}
+  ballline: {fileID: 99695677}
+  cam: {fileID: 330585543}
   notiText: {fileID: 0}
 --- !u!4 &2064924111
 Transform:

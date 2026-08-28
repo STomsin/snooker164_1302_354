@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
         if (cubeBall != null)
         {
             if (cubeBall != null)
-                cubeBall.transform.Rotate(0f, xInput, 0f);
+                cubeBall.transform.Rotate(0f, xInput * 10, 0f);
         }
     }
 
