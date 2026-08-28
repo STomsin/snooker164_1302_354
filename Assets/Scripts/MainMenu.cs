@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -12,5 +12,13 @@ public class MainMenu : MonoBehaviour
     void Update()
     {
         
+    }
+    public void StartNewGame()
+    {
+        SceneManager.LoadScene("Scene01");
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
